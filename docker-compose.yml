@@ -1,0 +1,8 @@
+version: '3'
+services:
+  dockerpythonflaskcharts:
+    build: ./
+    ports:
+      - "3510:5000"    
+    volumes:
+      - .:/usr/src/app
