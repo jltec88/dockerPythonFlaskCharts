@@ -9,7 +9,6 @@ from sqlalchemy import create_engine
 
 import sqlalchemy
 import mysql.connector
-import pymysql
 
 
 hostname= credentials.host
@@ -20,11 +19,9 @@ tableNameIE = credentials.tableNameIE
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = "JLKJJJO3IURYoiouolnojojouuoo=5y9y9youjuy952oohhbafdnoglhoho"
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///expenseDB.db'
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://'+uname+':'+pwd+'@'+hostname+'/'+dbname
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://'+uname+':'+pwd+'@'+hostname+'/'+dbname
-#mysql://username:password@server/db
+
 
 
 db = SQLAlchemy(app)

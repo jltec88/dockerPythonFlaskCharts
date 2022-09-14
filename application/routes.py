@@ -47,11 +47,9 @@ def dashboard():
         income_category.append(int(amounts))
 
     income_expense = []
-    for total_amount, _ in income_vs_expense:
-        print(total_amount)
+    for total_amount, _ in income_vs_expense:        
         income_expense.append(int(total_amount))
-        print(income_expense)
-    print(income_expense)
+        
     
     
     over_time_expenditure = []
@@ -60,30 +58,6 @@ def dashboard():
         dates_label.append(date.strftime("%m-%d-%y"))
         over_time_expenditure.append(int(amount))
 
-    """ print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")
-    print("ATENTOOOOOOOOOO")    
-    print(over_time_expenditure)
-    parte1 = int(income_expense[0])
-    parte2 = int(income_expense[1])
-    parte2 = int(income_category[0])
-    print(parte1)
-    print(parte2) """
-    #income_expense = Decimal(income_expense)    
-    #income_category=Decimal(income_category)
-    #over_time_expenditure=Decimal(over_time_expenditure)
-    #dates_label =Decimal(dates_label)
     return render_template('dashboard.html',
                             income_vs_expense=json.dumps(income_expense),
                             income_category=json.dumps(income_category),
@@ -91,5 +65,3 @@ def dashboard():
                             dates_label =json.dumps(dates_label)
                         )
     
-    #dockerpythonflaskcharts_1  | [Decimal('16000'), Decimal('11000')]
-    #dockerpythonflaskcharts_1  | [16000, 11000]
